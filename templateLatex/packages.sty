@@ -1,0 +1,53 @@
+\usepackage[T1]{fontenc}
+
+% For lorem epsum
+\usepackage{blindtext}
+
+\usepackage{multicol}
+
+% for images
+\usepackage{graphicx}
+
+% for importing sections
+\usepackage{import}
+
+
+% --- Page setup ---
+\usepackage[a4paper, total={150mm, 245mm,footskip = 14mm}]{geometry}
+% \setlength{\parindent}{0em}
+\setlength{\parskip}{0.8em}
+
+% --- Main matter ---
+% This is the main part of the paper.
+\newcommand{\mainmatter}{
+    \newpage
+    \pagenumbering{arabic}  % Setting page numbering to normal integers
+}
+
+% --- Front matter ---
+% Front matter is located before the table of contents, e.g. preface (Norsk: forord) and often has separate settings
+\newcommand{\frontmatter}{
+    \pagenumbering{roman}   % Setting page numbering to lower-case roman
+}
+
+
+% allows quick horizontal ruling
+\newcommand{\Hrule}{
+    \rule{\linewidth}{0.25mm}
+}   % Ruler
+
+
+\usepackage[backend = biber,    % Recommended backend for sorting bibliography
+            style = authoryear-comp,    % Close to the 'Harvard' referencing style
+            urldate = long,     % Long: 24th Mar. 1997 | Short: 24/03/1997
+            maxcitenames = 2,   % Number of authors in cite before replaced with 'Author#1 et al.'
+]{biblatex}
+\addbibresource{references.bib}     % Adding our file containing the references
+% \addbibresource{reference_2.bib} is possible if we want to add several reference files
+
+% Indent after each section heading
+\usepackage{indentfirst}
+
+
+
+
